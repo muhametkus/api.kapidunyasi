@@ -1,0 +1,15 @@
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.csproj.AssemblyReference.cache
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.AssemblyInfoInputs.cache
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.AssemblyInfo.cs
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.csproj.CoreCompileInputs.cache
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/bin/Debug/net10.0/Api.KapiDunyasi.Application.deps.json
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/bin/Debug/net10.0/Api.KapiDunyasi.Application.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/bin/Debug/net10.0/Api.KapiDunyasi.Application.pdb
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/bin/Debug/net10.0/Api.KapiDunyasi.Domain.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/bin/Debug/net10.0/Api.KapiDunyasi.Domain.pdb
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.Kapi.6AE053EA.Up2Date
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/refint/Api.KapiDunyasi.Application.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/Api.KapiDunyasi.Application.pdb
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Application/obj/Debug/net10.0/ref/Api.KapiDunyasi.Application.dll

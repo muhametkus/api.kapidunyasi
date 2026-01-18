@@ -1,0 +1,11 @@
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/bin/Debug/net10.0/Api.KapiDunyasi.Domain.deps.json
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/bin/Debug/net10.0/Api.KapiDunyasi.Domain.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/bin/Debug/net10.0/Api.KapiDunyasi.Domain.pdb
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/Api.KapiDunyasi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/Api.KapiDunyasi.Domain.AssemblyInfoInputs.cache
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/Api.KapiDunyasi.Domain.AssemblyInfo.cs
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/Api.KapiDunyasi.Domain.csproj.CoreCompileInputs.cache
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/Api.KapiDunyasi.Domain.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/refint/Api.KapiDunyasi.Domain.dll
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/Api.KapiDunyasi.Domain.pdb
+/Users/muhammetkus/Desktop/api.kapidunyasi/src/Api.KapiDunyasi.Domain/obj/Debug/net10.0/ref/Api.KapiDunyasi.Domain.dll

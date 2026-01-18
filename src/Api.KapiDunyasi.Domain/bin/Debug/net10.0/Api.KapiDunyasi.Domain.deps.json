@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Api.KapiDunyasi.Domain/1.0.0": {
+        "runtime": {
+          "Api.KapiDunyasi.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Api.KapiDunyasi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

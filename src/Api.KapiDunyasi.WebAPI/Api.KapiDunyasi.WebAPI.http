@@ -1,0 +1,6 @@
+@Api.KapiDunyasi.WebAPI_HostAddress = http://localhost:5214
+
+GET {{Api.KapiDunyasi.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
