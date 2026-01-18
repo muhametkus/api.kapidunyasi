@@ -48,6 +48,34 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
+
+// CORS yapılandırması
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+    
+    // Daha güvenli alternatif - belirli origin'lere izin ver
+    options.AddPolicy("AllowSpecificOrigins", policy =>
+    {
+        policy.WithOrigins(
+                "http://localhost:5173",
+                "http://localhost:3000",
+                "https://kapidunyasi.net",
+                "http://kapidunyasi.45.158.14.222.sslip.io",
+                "https://www.hebilogluahsap.com",
+                "https://kapidunyasi678.vercel.app"
+              )
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
+
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add<ValidationFilter>();
@@ -118,6 +146,9 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseHttpsRedirection();
 }
+
+// CORS middleware - Authentication'dan önce olmalı
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
