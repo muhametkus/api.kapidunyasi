@@ -68,7 +68,7 @@ builder.Services.AddCors(options =>
                 "https://kapidunyasi.net",
                 "http://kapidunyasi.45.158.14.222.sslip.io",
                 "https://www.hebilogluahsap.com",
-                "https://kapidunyasi678.vercel.app"
+                "https://kapi-dunyasi.vercel.app"
               )
               .AllowAnyMethod()
               .AllowAnyHeader()
