@@ -14,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
     options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedHost;
+    options.ForwardLimit = null;
     options.KnownNetworks.Clear();
     options.KnownProxies.Clear();
 });
@@ -153,11 +154,16 @@ var app = builder.Build();
 // Forwarded headers must be first for reverse proxy (Traefik)
 app.UseForwardedHeaders();
 
-// Force HTTPS redirection in all environments
-app.UseHttpsRedirection();
-
 // Swagger enabled in all environments
-app.UseSwagger();
+app.UseSwagger(c =>
+{
+    c.PreSerializeFilters.Add((swagger, httpReq) =>
+    {
+        var proto = httpReq.Headers["X-Forwarded-Proto"].FirstOrDefault() ?? httpReq.Scheme;
+        var host = httpReq.Headers["X-Forwarded-Host"].FirstOrDefault() ?? httpReq.Host.Value;
+        swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{proto}://{host}" } };
+    });
+});
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "KapiDunyasi API v1");
