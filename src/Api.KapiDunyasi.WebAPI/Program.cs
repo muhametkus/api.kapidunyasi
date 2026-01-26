@@ -3,11 +3,20 @@ using Api.KapiDunyasi.Infrastructure;
 using Api.KapiDunyasi.Infrastructure.Security;
 using Api.KapiDunyasi.WebAPI.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Forwarded Headers for reverse proxy (Traefik)
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedHost;
+    options.KnownNetworks.Clear();
+    options.KnownProxies.Clear();
+});
 
 // Add Swagger/OpenAPI with Bearer token support
 builder.Services.AddSwaggerGen(options =>
@@ -17,6 +26,12 @@ builder.Services.AddSwaggerGen(options =>
         Title = "KapiDunyasi API",
         Version = "v1",
         Description = "Kapı Dünyası E-Ticaret API"
+    });
+
+    // Add server URL for Swagger to use HTTPS
+    options.AddServer(new OpenApiServer
+    {
+        Url = "https://apikapidunyasi.hebilogluahsap.com"
     });
 
     // JWT Bearer token authentication for Swagger
@@ -135,6 +150,12 @@ builder.Services.AddAuthorization(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+// Forwarded headers must be first for reverse proxy (Traefik)
+app.UseForwardedHeaders();
+
+// Force HTTPS redirection in all environments
+app.UseHttpsRedirection();
+
 // Swagger enabled in all environments
 app.UseSwagger();
 app.UseSwaggerUI(options =>
@@ -142,11 +163,6 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "KapiDunyasi API v1");
     options.RoutePrefix = "swagger";
 });
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseHttpsRedirection();
-}
 
 // CORS middleware - Authentication'dan önce olmalı
 app.UseCors("AllowAll");
